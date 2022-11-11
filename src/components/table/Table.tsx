@@ -1,26 +1,10 @@
 import "./table.scss"
 import { DataGrid } from '@mui/x-data-grid';
+import {Accounts as Props} from "../../App"
 
-type TableProps ={
-  players: {
-    uid: string;
-    country: string;
-    created_at: string;
-    lv: number;
-    items:{
-        itemId: number;
-        name: string;
-        magic?: number;
-        attack?: number;
-        defence?: number;
-    } [];
-    block_type: boolean;
-    pvp_rank: number;
-    reward_type: string;
-    last_stage: string;
-  }[]
-}
-  
+interface TableProps{
+    players:Props[]
+  }
 const Table = ({players}:TableProps) => {
 
   const columns = [
@@ -59,7 +43,6 @@ const Table = ({players}:TableProps) => {
       rowsPerPageOptions={[10]}
       checkboxSelection
       rowHeight={30}
-      // pagination
     />
   </div>
   )

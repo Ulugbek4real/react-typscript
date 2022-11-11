@@ -1,13 +1,7 @@
 import "./items.scss"
-
-type ItemsProps = {
-  items:{
-    itemId: number;
-    name: string;
-    magic?: number;
-    attack?: number;
-    defence?: number;
-}[],
+import {Accounts as Props} from "../../App"
+interface ItemsProps  {
+  items:Props["items"],
 itemOwner:string
 }
 

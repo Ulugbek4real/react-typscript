@@ -6,7 +6,8 @@ import "./app.scss"
 import PieGraph from "./components/pie/PieGraph"
 import { useEffect, useState } from "react";
 
-type Accounts = {
+// CREATING AND EXPORTING THE INTERFACE TO USE IT LATER ON OTHER COMPONENTS
+ export interface Accounts  {
   uid: string;
   country: string;
   created_at: string;
@@ -22,18 +23,14 @@ type Accounts = {
   pvp_rank: number;
   reward_type: string;
   last_stage: string;
-}[]
-const players: Accounts = Data.data.result
+}
+const players: Accounts[] = Data.data.result
 function App() {
 
+
+
   // CREATING A DATA PROPS TO ITEMS COMPONENT
- const [items , setItems] = useState<{
-  itemId: number;
-  name: string;
-  magic?: number;
-  attack?: number;
-  defence?: number;
-}[]>([])
+ const [items , setItems] = useState<Accounts["items"]>([])
  const [itemOwner, setItemOwner ] = useState<string>("")
  function handleClick(e:any){
   if( e.composedPath()[0].innerHTML.split(" ")[0] === "See"){
@@ -54,8 +51,9 @@ function App() {
     }
   },[itemOwner])
   
+
+
   // CREATING A DATA PROPS TO BARGRAPH COMPONENT
-  
 const countRewards = () =>{
 let normal = 0
 let vip = 0
@@ -100,8 +98,9 @@ return   [
 ]
 }
 
-  // CREATING A DATA PROPS TO PIEGRAPH COMPONENT
 
+
+  // CREATING A DATA PROPS TO PIEGRAPH COMPONENT
   const piaChart_data =() => {
     const arr = []
     let kr = 0

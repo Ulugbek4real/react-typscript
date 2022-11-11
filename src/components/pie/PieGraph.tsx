@@ -1,6 +1,6 @@
 import "./pieGraph.scss"
 import { PieChart, Pie, Cell } from 'recharts';
-type PieGraphProps = {
+interface PieGraphProps {
   data:{ name:string, value: number }[]
 }
 

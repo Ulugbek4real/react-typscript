@@ -1,6 +1,6 @@
 import "./barGraph.scss"
 import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
-type BarGraphProps = {
+interface BarGraphProps  {
 data :{
   name: string;
   "All accounts": number;
