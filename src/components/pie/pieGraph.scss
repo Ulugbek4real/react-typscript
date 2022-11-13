@@ -1,6 +1,5 @@
 .pie-chart{
     box-sizing: border-box;
-// height: 300px;
 padding: 3rem 1rem 0;
 width: 100%;
 display: flex;
@@ -38,10 +37,8 @@ position: relative;
         justify-content: space-between;
         position: relative;
         .color{
-            // content: " ";
             width: 18px;
             height: 18px;
-            // background-color: black;
             border-radius: 5px;
             position: absolute;
             left: -22px;
