@@ -17,4 +17,4 @@ Second
 
 ## To view this the app live visit this link:
 
-https://react-typescript-for-test.netlify.app/
+https://for-the-front-end-test.netlify.app/
